@@ -16,17 +16,17 @@ Choosing the right medication is critical for patient outcomes. This project aut
 ## Dataset Features
 The model is trained on patient records with the following features:
 
-Age: Age of the patient.
+**Age:** Age of the patient.
 
-Sex: Gender of the patient (F/M).
+**Sex:** Gender of the patient (F/M).
 
-BP: Blood Pressure levels (Low, Normal, High).
+**BP:** Blood Pressure levels (Low, Normal, High).
 
-Cholesterol: Cholesterol levels (Normal, High).
+**Cholesterol:** Cholesterol levels (Normal, High).
 
-Na_to_K: Sodium-to-potassium ratio in the blood.
+**Na_to_K:** Sodium-to-potassium ratio in the blood.
 
-Drug (Target): The drug prescribed (DrugY, drugX, drugA, drugC, drugB)
+**Drug (Target):** The drug prescribed (DrugY, drugX, drugA, drugC, drugB)
 
 ### Technologies Used
 Python (Google Colab environment)
@@ -36,9 +36,6 @@ Pandas & NumPy: For data manipulation and analysis.
 Scikit-Learn: For machine learning modeling and preprocessing.
 
 Matplotlib & Seaborn: For data visualization.
-
-#Key Results
-Successfully handled categorical encoding for clinical data.
 
 The Decision Tree Classifier achieved high accuracy in distinguishing between the five drug classes.
 
