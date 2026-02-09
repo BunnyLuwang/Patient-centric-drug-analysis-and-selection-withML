@@ -1,42 +1,61 @@
-# Patient-Centric Drug Selection with Machine Learning
+# Patient-Centric Drug Selection Using Machine Learning
 
 This project utilizes multi-class classification techniques to predict the most appropriate drug for a patient based on their demographic and health profiles (Age, Sex, Blood Pressure, Cholesterol, and Sodium-to-Potassium ratio).
 
 ## Project Overview
-Choosing the right medication is critical for patient outcomes. This project automates the selection process among five different drug types by analyzing patient health indicators. It demonstrates a complete end-to-end data science workflow:
+This project focuses on building a patient-centric drug selection system using Machine Learning techniques. By analyzing patient attributes such as age, gender, blood pressure, cholesterol levels, and sodium-to-potassium ratio, the model predicts the most suitable drug for a patient. The goal is to support data-driven and personalized medical decision-making.
 
-**Data Cleaning & Preprocessing:** Handling categorical variables and feature scaling.
+## Objectives
+Analyze patient health data for meaningful patterns
 
-**Exploratory Data Analysis (EDA):** Visualizing distributions and relationships between health metrics.
+Perform data cleaning and exploratory data analysis (EDA)
 
-**Model Building:** Implementing Decision Tree and Random Forest classifiers.
+Engineer relevant features such as age groups
 
-**Evaluation:** Assessing performance using Confusion Matrices and Accuracy scores.
+Train and evaluate machine learning models for drug prediction
+
+Build an interpretable and accurate classification system
 
 ## Dataset Features
-The model is trained on patient records with the following features:
+The dataset includes patient-related attributes such as:
 
-**Age:** Age of the patient.
+Age
 
-**Sex:** Gender of the patient (F/M).
+Sex
 
-**BP:** Blood Pressure levels (Low, Normal, High).
+Blood Pressure
 
-**Cholesterol:** Cholesterol levels (Normal, High).
+Cholesterol
 
-**Na_to_K:** Sodium-to-potassium ratio in the blood.
+Na_to_K ratio
 
-**Drug (Target):** The drug prescribed (DrugY, drugX, drugA, drugC, drugB)
+Drug (Target Variable)
+
+The data is preprocessed to remove duplicates, handle missing values, and improve model performance.
 
 ### Technologies Used
-Python (Google Colab environment)
+Python
 
-Pandas & NumPy: For data manipulation and analysis.
+Pandas – data manipulation
 
-Scikit-Learn: For machine learning modeling and preprocessing.
+NumPy – numerical operations
 
-Matplotlib & Seaborn: For data visualization.
+Matplotlib / Seaborn – data visualization
 
-The Decision Tree Classifier achieved high accuracy in distinguishing between the five drug classes.
+Scikit-learn – machine learning models and evaluation
 
-Identified Na_to_K ratio and Age as significant predictors in the drug selection logic.
+## Methodology
+
+1. Data Loading & Inspection - Mounted Google Drive and loaded the dataset. Checked for missing values, duplicates, and data types
+
+2. Data Preprocessing - Removed duplicate records, Feature engineering (e.g., age grouping), Encoded categorical variables
+
+3. Exploratory Data Analysis (EDA) - Statistical summaries, Distribution and class balance analysis
+
+4. Model Training - Applied supervised ML classification techniques. Split data into training and testing sets
+
+5. Evaluation - Measured performance using accuracy and other metrics. Compared predictions with actual drug labels
+
+## Results
+
+The trained model successfully predicts the appropriate drug based on patient features, demonstrating the potential of ML in supporting personalized healthcare decisions.
