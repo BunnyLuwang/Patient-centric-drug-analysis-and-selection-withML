@@ -54,7 +54,9 @@ Scikit-learn – machine learning models and evaluation
 
 4. Model Training - Applied supervised ML classification techniques. Split data into training and testing sets
 
-5. Evaluation - Measured performance using accuracy and other metrics. Compared predictions with actual drug labels
+5. Class Imbalance management - Use of SMOTE to handle class imbalance for better Modeling
+
+6. Evaluation - Measured performance using accuracy and other metrics. Compared predictions with actual drug labels
 
 ## Results
 
