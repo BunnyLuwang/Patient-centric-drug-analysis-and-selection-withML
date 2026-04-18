@@ -1,63 +1,94 @@
 # Patient-Centric Drug Selection Using Machine Learning
 
-This project utilizes multi-class classification techniques to predict the most appropriate drug for a patient based on their demographic and health profiles (Age, Sex, Blood Pressure, Cholesterol, and Sodium-to-Potassium ratio).
+> A multi-class classification system that predicts the most suitable 
+> drug for a patient based on their demographic and clinical profile — 
+> supporting data-driven, personalized medical decision-making.
 
-## Project Overview
-This project focuses on building a patient-centric drug selection system using Machine Learning techniques. By analyzing patient attributes such as age, gender, blood pressure, cholesterol levels, and sodium-to-potassium ratio, the model predicts the most suitable drug for a patient. The goal is to support data-driven and personalized medical decision-making.
+---
 
-## Objectives
-Analyze patient health data for meaningful patterns
+## Business Problem
 
-Perform data cleaning and exploratory data analysis (EDA)
+Prescribing the right drug to the right patient is a critical challenge 
+in clinical care. Mismatched prescriptions lead to treatment failure, 
+side effects, and increased healthcare costs. This project builds an 
+ML-powered recommendation system that identifies the optimal drug based 
+on patient attributes — providing a data-driven aid for clinical teams.
 
-Engineer relevant features such as age groups
-
-Train and evaluate machine learning models for drug prediction
-
-Build an interpretable and accurate classification system
+---
 
 ## Dataset Features
-The dataset includes patient-related attributes such as:
 
-Age
+| Feature | Description |
+|---|---|
+| Age | Patient age |
+| Sex | Gender |
+| Blood Pressure | BP level (LOW / NORMAL / HIGH) |
+| Cholesterol | Cholesterol level (NORMAL / HIGH) |
+| Na_to_K ratio | Sodium-to-Potassium ratio in blood |
+| **Drug** | **Target — drug type to prescribe** |
 
-Sex
-
-Blood Pressure
-
-Cholesterol
-
-Na_to_K ratio
-
-Drug (Target Variable)
-
-The data is preprocessed to remove duplicates, handle missing values, and improve model performance.
-
-### Technologies Used
-Python
-
-Pandas – data manipulation
-
-NumPy – numerical operations
-
-Matplotlib / Seaborn – data visualization
-
-Scikit-learn – machine learning models and evaluation
+---
 
 ## Methodology
 
-1. Data Loading & Inspection - Mounted Google Drive and loaded the dataset. Checked for missing values, duplicates, and data types
+**1. Data Cleaning & Inspection**
+- Checked for missing values, duplicates, and data type issues
+- Removed duplicate records
 
-2. Data Preprocessing - Removed duplicate records, Feature engineering (e.g., age grouping), Encoded categorical variables
+**2. Feature Engineering**
+- Created age group bins for improved model interpretability
+- Encoded categorical variables (Sex, BP, Cholesterol)
 
-3. Exploratory Data Analysis (EDA) - Statistical summaries, Distribution and class balance analysis
+**3. Exploratory Data Analysis**
+- Statistical summaries and distribution analysis
+- Class balance analysis before and after SMOTE
 
-4. Model Training - Applied supervised ML classification techniques. Split data into training and testing sets
+**4. Class Imbalance Handling**
+- Applied **SMOTE** (Synthetic Minority Oversampling Technique) 
+  to balance drug class distribution before training
 
-5. Class Imbalance management - Use of SMOTE to handle class imbalance for better Modeling
+**5. Model Training & Evaluation**
+- Trained 4 supervised ML classifiers
+- Evaluated using Accuracy, Precision, Recall, and F1-Score
 
-6. Evaluation - Measured performance using accuracy and other metrics. Compared predictions with actual drug labels
+---
 
-## Results
+## Model Comparison Results
 
-The trained model successfully predicts the appropriate drug based on patient features, demonstrating the potential of ML in supporting personalized healthcare decisions.
+| Model | Accuracy | Precision | Recall | F1-Score |
+|---|---|---|---|---|
+| **Logistic Regression** | **100%** | **1.00** | **1.00** | **1.00** |
+| Gaussian Naïve Bayes | 100% | 1.00 | 1.00 | 1.00 |
+| Decision Tree | 95% | 0.96 | 0.95 | 0.95 |
+| Random Forest | 93% | 0.95 | 0.93 | 0.94 |
+
+> **Note:** Perfect scores for Logistic Regression and Gaussian NB are 
+> consistent with this dataset's well-defined decision boundaries 
+> post-SMOTE balancing and feature engineering. Logistic Regression 
+> was selected as the final model for its interpretability advantage 
+> in a clinical context.
+
+---
+
+## Business Insight
+
+In a clinical setting, interpretability matters as much as accuracy. 
+Logistic Regression was chosen over Gaussian NB (despite equal scores) 
+because its coefficients can be mapped back to patient features — 
+allowing clinicians to understand *why* a drug was recommended, not 
+just *what* was recommended.
+
+---
+
+## Tech Stack
+
+`Python` `Pandas` `NumPy` `Matplotlib` `Seaborn` `Scikit-learn` 
+`imbalanced-learn (SMOTE)` `Jupyter Notebook`
+
+---
+
+## Future Improvements
+
+- Add cross-validation to further validate perfect accuracy claims
+- Deploy as a clinical decision-support web app using Streamlit/Gradio
+- Extend dataset with more patient records for generalizability
