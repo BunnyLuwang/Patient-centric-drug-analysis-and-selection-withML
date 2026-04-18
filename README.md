@@ -25,7 +25,7 @@ on patient attributes — providing a data-driven aid for clinical teams.
 | Blood Pressure | BP level (LOW / NORMAL / HIGH) |
 | Cholesterol | Cholesterol level (NORMAL / HIGH) |
 | Na_to_K ratio | Sodium-to-Potassium ratio in blood |
-| **Drug** | **Target — drug type to prescribe** |
+| **Drug** | **Target drug type to prescribe** |
 
 ---
 
