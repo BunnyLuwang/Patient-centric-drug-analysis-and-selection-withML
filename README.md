@@ -30,8 +30,7 @@ on patient attributes - providing a data-driven aid for clinical teams.
 ---
 
 ## Power BI Dashboard
-
-<img width="1305" height="727" alt="Screenshot 2026-04-27 202730" src="https://github.com/user-attachments/assets/0b5d8a71-2f39-4c39-a8f5-11723a1f3da1" />
+<img width="1321" height="737" alt="Screenshot 2026-04-27 204725" src="https://github.com/user-attachments/assets/8fa2b228-7136-42a0-9007-44d790d8c1fe" />
 
 
 ### KPI Summary
