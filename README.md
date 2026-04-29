@@ -100,11 +100,11 @@ on patient attributes - providing a data-driven aid for clinical teams.
 
 ---
 
-## 🤖 Model Comparison Results
+## Model Comparison Results
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| **Logistic Regression** ✅ | **100%** | **1.00** | **1.00** | **1.00** |
+| **Logistic Regression** | **100%** | **1.00** | **1.00** | **1.00** |
 | Gaussian Naïve Bayes | 100% | 1.00 | 1.00 | 1.00 |
 | Decision Tree | 95% | 0.96 | 0.95 | 0.95 |
 | Random Forest | 93% | 0.95 | 0.93 | 0.94 |
